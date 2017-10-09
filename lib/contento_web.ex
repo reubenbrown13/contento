@@ -47,24 +47,24 @@ defmodule ContentoWeb do
     end
   end
 
-  def theme_view do
-    quote do
-      use Phoenix.View, root: "priv/themes", path: "",
-                        pattern: "**/templates/**/*", namespace: ContentoWeb
-
-      # Import convenience functions from controllers
-      import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
-
-      # Use all HTML functionality (forms, tags, etc)
-      use Phoenix.HTML
-
-      import ContentoWeb.Router.Helpers
-      import ContentoWeb.ErrorHelpers
-      import ContentoWeb.Gettext
-      import ContentoWeb.ThemeHelpers
-      import ContentoWeb.SessionHelpers
-    end
-  end
+  # def theme_view do
+  #   quote do
+  #     use Phoenix.View, root: "priv/themes", path: "",
+  #                       pattern: "**/templates/**/*", namespace: ContentoWeb
+  # 
+  #     # Import convenience functions from controllers
+  #     import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
+  #
+  #     # Use all HTML functionality (forms, tags, etc)
+  #     use Phoenix.HTML
+  #
+  #     import ContentoWeb.Router.Helpers
+  #     import ContentoWeb.ErrorHelpers
+  #     import ContentoWeb.Gettext
+  #     import ContentoWeb.ThemeHelpers
+  #     import ContentoWeb.SessionHelpers
+  #   end
+  # end
 
   def router do
     quote do

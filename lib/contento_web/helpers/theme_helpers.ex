@@ -18,9 +18,11 @@ defmodule ContentoWeb.ThemeHelpers do
   def meta_data(%{assigns: assigns} = _conn) do
     website_description = assigns[:settings].website_description
 
-    raw """
+    {:safe, block} = raw """
     <meta name="description" content="#{website_description}">
     """
+
+    block
   end
 
   def active?(conn, path) do

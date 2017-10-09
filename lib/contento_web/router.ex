@@ -11,7 +11,6 @@ defmodule ContentoWeb.Router do
 
   pipeline :contento do
     plug ContentoWeb.Plug.AuthRequired
-    plug :put_layout, {ContentoWeb.LayoutView, "contento.html"}
   end
 
   pipeline :session do
