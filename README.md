@@ -48,6 +48,8 @@ Documentation will be available online in our website and on Hex Docs as soon as
 
 Contributions are very much appreciated and welcome! A guide on contributing will be available soon. In the meanwhile, follow the features and issues on the [Issue Tracker]() and feel free to push your PRs for evaluation. It's better that before you even start working on some feature or bug fix to join `#contento` channel for previous discussion. Until a guide is out, you may refer to [Phoenix's Contributor Code of Conduct](https://github.com/phoenixframework/phoenix/blob/master/CODE_OF_CONDUCT.md) for general guidelines on how to contribute, as we'll eventually follow their approach in this project one way or another.
 
+As part of the features defined in [ROADMAP.md](https://github.com/contentocms/contento/blob/master/ROADMAP.md) we also need serious help on UX/UI for both the back-office and the default theme [Simplo](https://github.com/contentocms/simplo).
+
 ## License
 
 This project is licensed under the [MIT license](https://github.com/contentocms/contento/blob/master/LICENSE.md).
