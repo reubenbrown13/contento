@@ -1,6 +1,6 @@
-# <img src="https://github.com/contentocms/contento/raw/master/assets/static/images/logo.png" style="display: inline-block !important;vertical-align: middle !important;" height="40px" /> Contento
+# Contento
 
-> ### Open Source CMS
+> ### Open Source Content Management System
 > Built with all the power and love behind [Elixir](https://elixir-lang.org) and [Phoenix](https://phoenixframework.org).
 
 ![Contento Admin Screenshot](https://raw.githubusercontent.com/contentocms/contento/master/screenshot.png)
