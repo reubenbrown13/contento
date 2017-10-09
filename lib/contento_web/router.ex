@@ -81,5 +81,8 @@ defmodule ContentoWeb.Router do
 
     # Page or Post
     get "/:slug", WebsiteController, :page_or_post
+
+    # Assets
+    get "/*file", WebsiteController, :assets
   end
 end
