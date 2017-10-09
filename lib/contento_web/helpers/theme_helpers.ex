@@ -30,6 +30,6 @@ defmodule ContentoWeb.ThemeHelpers do
   end
 
   def md_as_html(md) do
-    raw Earmark.as_html!(md)
+    Earmark.as_html!(md)
   end
 end
