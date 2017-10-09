@@ -1,4 +1,4 @@
-# ![Contento Logo](https://github.com/contentocms/contento/raw/master/assets/static/images/logo.png) Contento
+# <img src="https://github.com/contentocms/contento/raw/master/assets/static/images/logo.png" style="display: inline-block;" height="40px" /> Contento
 
 > ### Open Source CMS
 > Built with all the power and love behind [Elixir](https://elixir-lang.org) and [Phoenix](https://phoenixframework.org).
