@@ -11,7 +11,7 @@ defmodule Contento.Mixfile do
       start_permanent: Mix.env == :prod,
       aliases: aliases(),
       deps: deps()
-    ]
+    ] ++ docs()
   end
 
   def application do
@@ -24,8 +24,25 @@ defmodule Contento.Mixfile do
   defp elixirc_paths(:test), do: ["lib", "test/support"]
   defp elixirc_paths(_),     do: ["lib"]
 
+  defp docs do
+    [
+      name: "Contento",
+      source_url: "https://github.com/contentocms/contento",
+      homepage_url: "https://getcontento.com",
+      description: """
+      An open-source CMS built with the power of Elixir and Phoenix.
+      """,
+      docs: [
+        main: "readme",
+        logo: "assets/static/images/logo.png",
+        extras: ["README.md"]
+      ]
+    ]
+  end
+
   defp deps do
     [
+      {:ex_doc, "~> 0.16", only: :dev, runtime: false},
       {:credo, "~> 0.8", only: [:dev, :test], runtime: false},
       {:phoenix, "~> 1.3.0"},
       {:phoenix_pubsub, "~> 1.0"},

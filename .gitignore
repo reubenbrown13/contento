@@ -28,3 +28,6 @@ npm-debug.log
 
 # Leave themes out of vcs
 /priv/themes/*
+
+# Docs
+/doc
