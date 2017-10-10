@@ -1,54 +1,35 @@
 # Contento
 
-> ### Open Source Content Management System
-> Built with all the power and love behind [Elixir](https://elixir-lang.org) and [Phoenix](https://phoenixframework.org).
+> ### An open source CMS
+> Built with [Elixir](https://elixir-lang.org) and the [Phoenix Framework](https://phoenixframework.org).
 
 ![Contento Admin Screenshot](https://raw.githubusercontent.com/contentocms/contento/master/screenshot.png)
 
 #### Disclaimer
 
-This project is currently a WIP! We're aiming to finish `v0.0.1` out soon, which will mainly include basic features to follow forward with development of several improvements on those and next expected features.
+This project is currently a WIP! We're aiming to get [v0.1.0](https://github.com/contentocms/contento/milestone/1) out soon, as an initial version to mark the pace for this project.
 
-Bear in mind that many things may (and most probably will) change before a stable version comes out!
+#### Useful Links
 
-If you have any suggestion, idea or just want to join discussion about this project, feel free to join `#contento` channel on [Elixir Slack](https://elixir-slackin.herokuapp.com/).
+- [Installing](https://github.com/contentocms/contento/wiki/Installing)
+- [Wiki/Guides](https://github.com/contentocms/contento/wiki)
+- [Documentation](#docuementation)
+- [Community](https://github.com/contentocms/contento/wiki/Community)
+- [Contributing](https://github.com/contentocms/contento/wiki/Contributing)
 
-See [Contributing]() for more information on directly contributing to this project.
+You can track this version progress by checking either the `v0.1.0` [milestone](https://github.com/contentocms/contento/milestone/1) or [project](https://github.com/contentocms/contento/projects/1).
 
 ## Getting Started
 
-1. Install the Contento archive, if you haven't already done so:
-
-```
-$ mix archive.install https://github.com/contentocms/contento_new/raw/master/releases/contento.new.ez
-```
-
-2. Create your new website with:
-
-```
-$ mix contento.new [directory]
-```
-
-This command will do a few things for you, including: cloning this repo to given directory, fetch and install dependencies, compile back-office assets, generate configuration files with defaults, create database and run migrations, install default theme [Simplo](https://github.com/contentocms/simplo) and setup Contento with defaults.
-
-After that your website is ready! You can access it on `http://localhost:4000` or `http://localhost:4000/login` to access back-office.
-
-The default user credentials are:
-
-- Email: **contento@example.org**
-- Password: **contento**
-
-**NOTE:** Check [ROADMAP.md](https://github.com/contentocms/contento/blob/master/ROADMAP.md) for a list of current features and what's expected to come next.
+It's fast and easy to get started using the Contento platform. Check out our [Installing](https://github.com/contentocms/contento/wiki/Installing) and [Creating a new project](https://github.com/contentocms/contento/wiki/Creating-a-new-project) guides to learn how.
 
 ## Documentation
 
-Documentation will be available online in our website and on Hex Docs as soon as possible. Until that time arrives, you may generate documentation locally with `mix docs`.
+Documentation will be available online on Hex Docs as soon as possible. Until that time, you can generate Contento's documentation locally with `mix docs`. Guides are available at the [Wiki](https://github.com/contentocms/contento/wiki).
 
 ## Contributing
 
-Contributions are very much appreciated and welcome! A guide on contributing will be available soon. In the meanwhile, follow the features and issues on the [Issue Tracker](https://github.com/contentocms/contento/issues) and feel free to push your PRs for evaluation. It's better that before you even start working on some feature or bug fix to join `#contento` channel for previous discussion. Until a guide is out, you may refer to [Phoenix's Contributor Code of Conduct](https://github.com/phoenixframework/phoenix/blob/master/CODE_OF_CONDUCT.md) for general guidelines on how to contribute, as we'll eventually follow their approach in this project one way or another.
-
-As part of the features defined in [ROADMAP.md](https://github.com/contentocms/contento/blob/master/ROADMAP.md) we also need serious help on UX/UI for both the back-office and the default theme [Simplo](https://github.com/contentocms/simplo).
+Contributions are very appreciated and welcome! Check out our [Contributing](https://github.com/contentocms/contento/wiki/Contributing) guide to learn how you can help make Contento better!
 
 ## License
 
