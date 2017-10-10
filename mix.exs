@@ -57,33 +57,9 @@ defmodule Contento.Mixfile do
 
   defp docs do
     [
-      extra_section: "GUIDES",
-      main: "overview",
       logo: "assets/static/images/logo.png",
       groups_for_modules: groups_for_modules(),
-      extras: extras(),
-      groups_for_extras: groups_for_extras()
-    ]
-  end
-
-  defp extras do
-    [
-      "guides/docs/introduction/overview.md",
-      "guides/docs/introduction/installation.md",
-      "guides/docs/introduction/community.md",
-
-      "guides/docs/first_things_first.md",
-      "guides/docs/managing_posts.md",
-      "guides/docs/managing_pages.md",
-      "guides/docs/managing_users.md",
-      "guides/docs/errors.md",
-    ]
-  end
-
-  defp groups_for_extras do
-    [
-      "Introduction": ~r/guides\/docs\/introduction\/.?/,
-      "Guides": ~r/guides\/docs\/[^\/]+\.md/
+      extras: ["README.md"]
     ]
   end
 
