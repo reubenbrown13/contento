@@ -52,6 +52,7 @@ defmodule Contento.Mixfile do
       {:bamboo, "~> 0.8"},
       {:bamboo_smtp, "~> 1.4.0"},
       {:scrivener_ecto, "~> 1.2"},
+      {:liquid, "~> 0.7.0"}
     ]
   end
 
