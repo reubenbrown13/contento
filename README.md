@@ -13,7 +13,7 @@ This project is currently a WIP! We're aiming to get [v0.1.0](https://github.com
 
 - [Installing](https://github.com/contentocms/contento/wiki/Installing)
 - [Wiki/Guides](https://github.com/contentocms/contento/wiki)
-- [Documentation](#docuementation)
+- [Documentation](#documentation)
 - [Community](https://github.com/contentocms/contento/wiki/Community)
 - [Contributing](https://github.com/contentocms/contento/wiki/Contributing)
 
