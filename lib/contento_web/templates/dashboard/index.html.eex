@@ -55,11 +55,17 @@
       </h1>
 
       <div class="list-group">
-        <a href="#" class="list-group-item">
-          <%= gettext("Contento Guides") %>
+        <a href="https://github.com/contentocms/contento/wiki" class="list-group-item">
+          <%= gettext("Wiki/Guides") %>
         </a>
-        <a href="#" class="list-group-item">
-          <%= gettext("Contento Documentation") %>
+        <a href="https://github.com/contentocms/contento/wiki/Community" class="list-group-item">
+          <%= gettext("Community") %>
+        </a>
+        <a href="https://github.com/contentocms/contento/wiki/Contributing" class="list-group-item">
+          <%= gettext("Contributing") %>
+        </a>
+        <a href="https://github.com/contentocms/contento/issues" class="list-group-item">
+          <%= gettext("Issue Tracker") %>
         </a>
       </div>
     </div>
