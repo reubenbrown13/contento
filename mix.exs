@@ -10,8 +10,15 @@ defmodule Contento.Mixfile do
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
       start_permanent: Mix.env == :prod,
       aliases: aliases(),
-      deps: deps()
-    ] ++ docs()
+      deps: deps(),
+      name: "Contento",
+      source_url: "https://github.com/contentocms/contento",
+      homepage_url: "https://getcontento.com",
+      description: """
+      An open-source CMS built with the power of Elixir and Phoenix.
+      """,
+      docs: docs()
+    ]
   end
 
   def application do
@@ -23,22 +30,6 @@ defmodule Contento.Mixfile do
 
   defp elixirc_paths(:test), do: ["lib", "test/support"]
   defp elixirc_paths(_),     do: ["lib"]
-
-  defp docs do
-    [
-      name: "Contento",
-      source_url: "https://github.com/contentocms/contento",
-      homepage_url: "https://getcontento.com",
-      description: """
-      An open-source CMS built with the power of Elixir and Phoenix.
-      """,
-      docs: [
-        main: "readme",
-        logo: "assets/static/images/logo.png",
-        extras: ["README.md"]
-      ]
-    ]
-  end
 
   defp deps do
     [
@@ -61,6 +52,121 @@ defmodule Contento.Mixfile do
       {:bamboo, "~> 0.8"},
       {:bamboo_smtp, "~> 1.4.0"},
       {:scrivener_ecto, "~> 1.2"},
+    ]
+  end
+
+  defp docs do
+    [
+      extra_section: "GUIDES",
+      main: "overview",
+      logo: "assets/static/images/logo.png",
+      groups_for_modules: groups_for_modules(),
+      extras: extras(),
+      groups_for_extras: groups_for_extras()
+    ]
+  end
+
+  defp extras do
+    [
+      "guides/docs/introduction/overview.md",
+      "guides/docs/introduction/installation.md",
+      "guides/docs/introduction/community.md",
+
+      "guides/docs/first_things_first.md",
+      "guides/docs/managing_posts.md",
+      "guides/docs/managing_pages.md",
+      "guides/docs/managing_users.md",
+      "guides/docs/errors.md",
+    ]
+  end
+
+  defp groups_for_extras do
+    [
+      "Introduction": ~r/guides\/docs\/introduction\/.?/,
+      "Guides": ~r/guides\/docs\/[^\/]+\.md/
+    ]
+  end
+
+  defp groups_for_modules do
+    # Ungrouped Modules:
+
+    [
+      "Core": [
+        Contento.Repo,
+        Contento.Guardian,
+        Contento.Guardian.Plug,
+        Contento.Mailer,
+        Contento.Mailer.Email,
+
+        ContentoWeb.Endpoint,
+        ContentoWeb.Router,
+        ContentoWeb.Router.Helpers,
+        ContentoWeb.Themer,
+        ContentoWeb.Gettext
+      ],
+
+      "Contexts": [
+        Contento.Accounts,
+        Contento.Content,
+        Contento.Themes,
+        Contento.Settings
+      ],
+
+      "Resources": [
+        Contento.Accounts.User,
+        Contento.Content.Post,
+        Contento.Content.Page,
+        Contento.Themes.Theme,
+        Contento.Settings.Setting,
+      ],
+
+      "Controllers": [
+        ContentoWeb.AccountController,
+        ContentoWeb.DashboardController,
+        ContentoWeb.FallbackController,
+        ContentoWeb.PageController,
+        ContentoWeb.PostController,
+        ContentoWeb.SessionController,
+        ContentoWeb.SettingsController,
+        ContentoWeb.ThemeController,
+        ContentoWeb.UserController,
+        ContentoWeb.WebsiteController
+      ],
+
+      "Views": [
+        ContentoWeb.AccountView,
+        ContentoWeb.DashboardView,
+        ContentoWeb.ErrorView,
+        ContentoWeb.LayoutView,
+        ContentoWeb.PageView,
+        ContentoWeb.PostView,
+        ContentoWeb.SessionView,
+        ContentoWeb.SettingsView,
+        ContentoWeb.ThemeView,
+        ContentoWeb.UserView
+      ],
+
+      "Helpers": [
+        ContentoWeb.AdminHelpers,
+        ContentoWeb.ErrorHelpers,
+        ContentoWeb.FormHelpers,
+        ContentoWeb.SessionHelpers,
+        ContentoWeb.ThemeHelpers
+      ],
+
+      "Plugs": [
+        ContentoWeb.Plug.AuthRequired,
+        ContentoWeb.Plug.CheckUser,
+        ContentoWeb.Plug.Maintenance,
+        ContentoWeb.Plug.PasswordSetup,
+        ContentoWeb.Plug.Settings,
+        ContentoWeb.Plug.Theme,
+        ContentoWeb.Plug.Website
+      ],
+
+      "Channels": [
+        ContentoWeb.UserSocket
+      ]
     ]
   end
 
