@@ -1,4 +1,10 @@
 defmodule Contento.Themer.FileSystem do
+  @moduledoc """
+  This module is responsible for loading, parsing and rendering Liquid
+  templates for a given theme. The theme is retrieved from the settings,
+  assigned to `conn`.
+  """
+
   alias Liquid.Template
 
   @doc """
