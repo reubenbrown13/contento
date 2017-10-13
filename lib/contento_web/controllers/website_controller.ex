@@ -2,24 +2,37 @@ defmodule ContentoWeb.WebsiteController do
   use ContentoWeb, :controller
 
   alias Contento.Content
-  alias ContentoWeb.Themer
+  alias Contento.Themer
 
   plug :put_layout, false
   plug :put_view, false
 
   action_fallback ContentoWeb.FallbackController
 
-  def index(conn, _params) do
-    posts = Content.list_posts(published: true)
-    do_render(conn, 200, "index.html", posts: posts)
+  def index(conn, params) do
+    data = Content.list_posts(params)
+
+    do_render(conn, 200, "index", posts: data.entries, page_number: data.page_number,
+                                  page_size: data.page_size, total_pages: data.total_pages,
+                                  total_entries: data.total_entries)
   end
 
+  def page_or_post(conn, assigns, :page_title) do
+    cond do
+      page = assigns[:page] ->
+        page.title
+      post = assigns[:post] ->
+        post.title
+      true ->
+        nil
+    end
+  end
   def page_or_post(conn, %{"slug" => slug} = _params) do
     cond do
       page = Content.get_page(slug: slug) ->
-        do_render(conn, 200, "page.html", page: page)
+        do_render(conn, 200, "page", page: page)
       post = Content.get_post(slug: slug) ->
-        do_render(conn, 200, "post.html", post: post)
+        do_render(conn, 200, "post", post: post)
       true ->
         {:error, :website_not_found}
     end
