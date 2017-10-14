@@ -42,7 +42,11 @@ defmodule ContentoWeb.WebsiteController do
     filepath = Path.join(["priv/themes/", conn.assigns[:settings].theme.alias, "assets"] ++ file)
 
     if File.exists?(filepath) && !File.dir?(filepath) do
-      send_file(conn, 200, filepath)
+      mime = MIME.from_path(filepath)
+
+      conn
+      |> put_resp_header("Content-Type", mime)
+      |> send_file(200, filepath)
     else
       {:error, :website_not_found}
     end
