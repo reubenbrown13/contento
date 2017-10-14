@@ -31,11 +31,12 @@ defmodule Contento.Themer do
 
   defp page_title(conn, assigns) do
     sep = " &mdash; "
-    controller = conn.private[:phoenix_controller]
-    action = action_name(conn)
     settings = assigns[:settings]
 
     try do
+      controller = conn.private[:phoenix_controller]
+      action = action_name(conn)
+
       title = apply(controller, action, [conn, assigns, :page_title])
       title <> sep <> settings.website_title
     rescue
