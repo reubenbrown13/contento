@@ -1,6 +1,7 @@
 defmodule ContentoWeb.WebsiteController do
   use ContentoWeb, :controller
 
+  alias Contento.Accounts
   alias Contento.Content
   alias Contento.Themer
 
@@ -35,6 +36,12 @@ defmodule ContentoWeb.WebsiteController do
         do_render(conn, 200, "post", post: post)
       true ->
         {:error, :website_not_found}
+    end
+  end
+
+  def author(conn, %{"handle" => handle}) do
+    if user = Accounts.get_user(handle: handle) do
+      do_render(conn, 200, "author", author: user)
     end
   end
 

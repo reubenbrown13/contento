@@ -3,6 +3,7 @@ defmodule ContentoWeb.FallbackController do
 
   alias Contento.Themer
 
+  def call(conn, nil), do: call(conn, {:error, :website_not_found})
   def call(conn, {:error, :website_not_found}) do
     body = Themer.render(conn, "not_found")
 

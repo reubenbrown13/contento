@@ -78,7 +78,7 @@ defmodule ContentoWeb.Router do
     get "/", WebsiteController, :index
 
     # Author
-    get "/authors/:handle", WebsiteController, :index
+    get "/authors/:handle", WebsiteController, :author
 
     # Page or Post
     get "/:slug", WebsiteController, :page_or_post
