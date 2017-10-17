@@ -6,7 +6,9 @@ defmodule Contento.Repo.Migrations.CreatePages do
       add :slug, :string
 
       add :title, :string
-      add :content, :string
+      add :content, :text
+
+      add :template, :string
 
       add :published, :boolean, default: false
       add :published_at, :naive_datetime

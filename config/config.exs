@@ -31,6 +31,10 @@ config :contento, ContentoWeb.Plug.Website,
   module: Contento.Guardian,
   error_handler: ContentoWeb.SessionController
 
+# Configure Liquid
+config :liquid,
+  file_system: {Contento.Themer.FileSystem, "priv/themes"}
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"

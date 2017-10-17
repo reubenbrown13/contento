@@ -6,13 +6,15 @@ defmodule Contento.Content.Page do
   alias Contento.Content.Page
 
   @required_fields ~w(slug author_id)a
-  @optional_fields ~w(title content published published_at)a
+  @optional_fields ~w(title content template published published_at)a
 
   schema "pages" do
     field :slug, :string
 
     field :title, :string
     field :content, :string
+
+    field :template, :string
 
     field :published, :boolean, default: false
     field :published_at, :naive_datetime
