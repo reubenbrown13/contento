@@ -23,6 +23,12 @@
     </div>
 
     <div class="form-group">
+      <%= label f, :template, gettext("Template") %>
+      <%= text_input f, :template, class: input_class(f, :template) %>
+      <%= input_errors f, :template %>
+    </div>
+
+    <div class="form-group">
       <%= label f, :published, gettext("Status") %>
       <%= select f, :published, ["Published": true, "Draft": false], class: input_class(f, :published) %>
       <%= input_errors f, :published %>

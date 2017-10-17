@@ -31,7 +31,10 @@ defmodule ContentoWeb.WebsiteController do
   def page_or_post(conn, %{"slug" => slug} = _params) do
     cond do
       page = Content.get_page(slug: slug) ->
-        do_render(conn, 200, "page", page: page)
+        template = if page_template = page.template, do: page_template,
+                                                     else: "page"
+
+        do_render(conn, 200, template, page: page)
       post = Content.get_post(slug: slug) ->
         do_render(conn, 200, "post", post: post)
       true ->
