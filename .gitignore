@@ -31,3 +31,6 @@ npm-debug.log
 
 # Docs
 /doc
+
+# ElixirLS
+/.elixir_ls
