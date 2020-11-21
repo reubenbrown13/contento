@@ -1,3 +1,5 @@
+** code is hosted on [gitlab](https://gitlab.com/reubenbrown13/contento) now **
+
 # Contento
 
 > ### An open source CMS
